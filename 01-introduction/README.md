@@ -100,14 +100,6 @@ docker run hello-world
 ```
 
 
-**Note**: If you get `It is required that your private key files are NOT accessible by others. This private key will be ignored.` error, you should change permits on the downloaded file to protect your private key:
-
- ```sh
-chmod 400 name-of-your-private-key-file.pem
-```
-
-
-
 # 🗒 Week 1 Notes: What is MLOps?
 
 When machine learning (ML) is used to solve a business problem, one could argue that delivering the model output to the end-user in a reliable way is an integral part of the machine learning process.
