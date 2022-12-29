@@ -93,6 +93,12 @@ If you get `docker: Cannot connect to the Docker daemon at unix:///var/run/docke
 ```sh
 sudo  dockerd
 ```
+If you get ` failed to start daemon: Error initializing network controller: error obtaining controller instance: unable to add return rule in DOCKER-ISOLATION-STAGE-1 chain:  (iptables failed: iptables --wait -A DOCKER-ISOLATION-STAGE-1 -j RETURN: iptables v1.8.7 (nf_tables):  RULE_APPEND failed (No such file or directory): rule in chain DOCKER-ISOLATION-STAGE-1
+ (exit status 4))`, open another shell prompt on your machine and execute 
+```sh
+sudo update-alternatives --set iptables /usr/sbin/iptables-legacy
+sudo update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+```
 then  in another reexcute in another shell prompt:
 
 ```sh
